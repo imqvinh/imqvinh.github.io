@@ -38,11 +38,11 @@ $(document).ready(function() {
 				}
 				oldIndex = index;
 				if(buttonState[index] === 0) {
-						$(this).attr("src","images/about" + (index + 1) + "_mb_hover.jpg");
+						$(this).attr("src","img/about" + (index + 1) + "_mb_hover.jpg");
 						buttonState[index] = 1;
 				}
 				else {
-						$(this).attr("src","images/about" + (index + 1) + "_mb.jpg");
+						$(this).attr("src","img/about" + (index + 1) + "_mb.jpg");
 						buttonState[index] = 0;
 				}
 				timeOut();
@@ -79,7 +79,7 @@ $(document).ready(function() {
 		function returnDefaultImg() {
 				var imageArray = document.getElementsByClassName("js-list-item-button");
 				for(var i = 0; i < imageArray.length; i++) {
-						imageArray[i].src = "images/about" + (i + 1) + "_mb.jpg";
+						imageArray[i].src = "img/about" + (i + 1) + "_mb.jpg";
 				}
 		}
 });
