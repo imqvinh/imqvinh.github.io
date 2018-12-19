@@ -22,11 +22,6 @@ $(document).ready(function() {
 				$(".js-list-item").css({pointerEvents: "auto"});
 		});
 		
-		/* 
-			Show menu content
-			@params: N/A
-			@return: N/A
-		*/
 		function slideContent() {
 				returnDefaultImg();
 				$(".js-blockcontent").not($(this).next()).hide();
@@ -48,11 +43,6 @@ $(document).ready(function() {
 				timeOut();
 		}
 
-		/*
-			Set time out
-			@params: N/A
-			@return: N/A
-		*/
 		function timeOut(productCategory) {
 				$(".js-list-item").css({pointerEvents: "none"})
 				setTimeout( function(){
@@ -60,22 +50,12 @@ $(document).ready(function() {
 				}, 500)
 		}
 
-		/*
-			Show product pop-up
-			@params: productCategory
-			@return: N/A
-		*/
 		function animateProductInfo(productCategory) {
 				$(productCategory).show();
 				$(productCategory).animate({top:"34px"}, 500);	
 				$(".js-list-item").css({pointerEvents: "none"})
 		}
 
-		/*
-			Set default menu button image
-			@params: N/A
-			@return: N/A
-		*/
 		function returnDefaultImg() {
 				var imageArray = document.getElementsByClassName("js-list-item-button");
 				for(var i = 0; i < imageArray.length; i++) {
