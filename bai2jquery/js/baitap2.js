@@ -6,22 +6,22 @@ $(document).ready(function() {
 		$(".js-list-item").on("click", ".js-list-item-button", slideContent);
 		
 		/* Show special product pop-up  */
-		$(".js-special-product-button").click( function() {	
+		$(".js-special-product-button").click( function() {
 				animateProductInfo(".js-special-product");
 		});
 		
 		/* Show common product pop-up  */
-		$(".js-common-product-button").click( function() {		
-				animateProductInfo(".js-common-product");					
+		$(".js-common-product-button").click( function() {
+				animateProductInfo(".js-common-product");
 		});
 		
 		/* Hide product pop-up  */
-		$(".js-button-close").click( function() {		
+		$(".js-button-close").click( function() {
 				$(this).parent().hide();
 				$(this).parent().animate({top: "-70%"}, 500);
 				$(".js-list-item").css({pointerEvents: "auto"});
 		});
-		
+
 		function slideContent() {
 				returnDefaultImg();
 				$(".js-blockcontent").not($(this).next()).hide();
@@ -52,10 +52,10 @@ $(document).ready(function() {
 
 		function animateProductInfo(productCategory) {
 				$(productCategory).show();
-				$(productCategory).animate({top:"34px"}, 500);	
+				$(productCategory).animate({top:"34px"}, 500);
 				$(".js-list-item").css({pointerEvents: "none"})
 		}
-
+		
 		function returnDefaultImg() {
 				var imageArray = document.getElementsByClassName("js-list-item-button");
 				for(var i = 0; i < imageArray.length; i++) {
